@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!-- An example Registration Form in HTML, created by David Nguyen -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <script
+            type="text/javascript"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"
+    ></script>
+
+    <!-- Toastr -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    ></script>
+
+    <!-- Fontawesome -->
+    <script
+            src="https://kit.fontawesome.com/680770c265.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <!-- Moment -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"
+    ></script>
+
+    <script src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="title">Boostrap Booking Form:</div>
+
+    <div class="well">
+        Please fill out the form and click the submit button when complete:
+    </div>
+
+    <form id="form">
+        <div class="row">
+            <div id="left" class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">User:</div>
+                    <div class="panel-body form-group" style="padding-bottom: 0">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="user-label">
+                                    <label for="username">Username:</label>
+                                </div>
+                                <div class="user-label">
+                                    <label for="firstname">First Name:</label>
+                                </div>
+                                <div class="user-label">
+                                    <label for="lastname">Last Name:</label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div id="usernameBox">
+                                    <input
+                                            type="text"
+                                            id="username"
+                                            name="username"
+                                            placeholder="Type username..."
+                                            class="form-control"
+                                    />
+                                </div>
+                                <div id="firstnameBox">
+                                    <input
+                                            type="text"
+                                            id="firstname"
+                                            name="firstname"
+                                            placeholder="Type first name..."
+                                            class="form-control"
+                                    />
+                                </div>
+                                <div id="lastnameBox">
+                                    <input
+                                            type="text"
+                                            id="lastname"
+                                            name="lastname"
+                                            placeholder="Type last name..."
+                                            class="form-control"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Contact:</div>
+
+                    <div class="panel-body form-group">
+                        <div class="input-group" id="phoneBox">
+                            <div class="input-group-addon">
+                                <i class="input-group-text fa fa-phone"></i>
+                            </div>
+                            <input
+                                    type="text"
+                                    id="phone"
+                                    class="form-control"
+                                    placeholder="Type phone#..."
+                            />
+                        </div>
+
+                        <div class="input-group" id="taxBox">
+                            <div class="input-group-addon">
+                                <i class="input-group-text fa fa-fax"></i>
+                            </div>
+                            <input
+                                    type="text"
+                                    id="tax"
+                                    class="form-control"
+                                    placeholder="Type fax#..."
+                            />
+                        </div>
+
+                        <div class="input-group" id="emailBox">
+                            <div class="input-group-addon">
+                                <i class="input-group-text fa fa-envelope"></i>
+                            </div>
+                            <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Type e-mail..."
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Schedule:</div>
+                    <div class="panel-body form-group">
+                        <div>
+                            <label>Adults:</label>
+                            <select name="adults" class="form-control" id="adults">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="checkin">Check-In:</label>
+                                <input id="checkin" type="date" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="checkout">Check-Out:</label>
+                                <input id="checkout" type="date" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Days:</label>
+                                <input
+                                        type="text"
+                                        disabled
+                                        class="form-control"
+                                        id="days"
+                                        placeholder="Display days..."
+                                />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Cost($):</label>
+                                <input
+                                        type="text"
+                                        disabled
+                                        class="form-control"
+                                        id="cost"
+                                        placeholder="Display cost..."
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="right" class="col-md-6">
+                <div class="panel form-group panel-primary">
+                    <div class="panel-heading">Others</div>
+                    <div class="panel-body form-group">
+                        <label>Message:</label><br />
+                        <textarea
+                                name="message"
+                                rows="21"
+                                class="form-control"
+                                placeholder="Type message here..."
+                        ></textarea
+                        ><br />
+                        <label>Range:</label>
+                        <input type="range" step="5" />
+                        <label>Priority</label>
+                        <br />
+                        <input type="radio" id="low" name="priority" value="low" />
+                        <label for="low" class="radio-label">Low</label>
+                        <input type="radio" id="med" name="priority" value="med" />
+                        <label for="med" class="radio-label">Med</label>
+                        <input type="radio" id="high" name="priority" value="high" />
+                        <label for="high" class="radio-label">High</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div id="button-div">
+            <button type="reset" class="btn btn-primary mr-1" id="reset">
+                <i class="fa-solid fa-eraser"></i>
+                Reset
+            </button>
+            <button type="submit" form="form" class="btn btn-success">
+                <i class="fa fa-paper-plane"></i>
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+* {
+    align-content: center;
+}
+
+#title {
+    color: red;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+input:not([type="radio"]) {
+    width: 100%;
+}
+
+.user-label {
+    margin: 3% 0 6%;
+}
+
+.radio-label {
+    margin-right: 3%;
+}
+
+#button-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    width: 15%;
+    margin-right: 5% !important;
+}
